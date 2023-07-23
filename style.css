@@ -33,18 +33,18 @@ body {
     
 }
 ::-webkit-scrollbar {
-    width: 10px; /* Width of the scrollbar */
+    width: 5px; 
   }
   
-  /* Styling the thumb of the scrollbar */
+
   ::-webkit-scrollbar-thumb {
-    background-color: #85818a; /* Color of the scrollbar thumb */
-    border-radius: 5px; /* Border radius of the scrollbar thumb */
+    background-color: #85818a; 
+    border-radius: 5px; 
   }
   
-  /* Styling the track of the scrollbar */
+  
   ::-webkit-scrollbar-track {
-    background-color: #f0f0f0; /* Color of the scrollbar track */
+    background-color: #f0f0f0; 
   }
 
 h1 {
