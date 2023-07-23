@@ -30,7 +30,22 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     overflow-x: hidden;
+    
 }
+::-webkit-scrollbar {
+    width: 10px; /* Width of the scrollbar */
+  }
+  
+  /* Styling the thumb of the scrollbar */
+  ::-webkit-scrollbar-thumb {
+    background-color: #85818a; /* Color of the scrollbar thumb */
+    border-radius: 5px; /* Border radius of the scrollbar thumb */
+  }
+  
+  /* Styling the track of the scrollbar */
+  ::-webkit-scrollbar-track {
+    background-color: #f0f0f0; /* Color of the scrollbar track */
+  }
 
 h1 {
     font-weight: 600;
