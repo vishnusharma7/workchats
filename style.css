@@ -343,11 +343,12 @@ span {
     z-index: 9999;
 
 }
-@media screen and (max-width: 768px){
-    .popup-container{
+
+@media screen and (max-width: 768px) {
+    .popup-container {
         width: 350px;
         height: 350px;
-        
+
     }
 }
 
@@ -403,7 +404,11 @@ span {
     right: 0;
     display: none
 }
-.invite-people{
+
+.invite-people {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 9999;
     position: absolute;
     left: 30%;
@@ -414,29 +419,34 @@ span {
     padding: 2em;
     background-color: var(--bg-color);
     border-radius: 20px;
-   
+
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
 }
 
-.invite-people textarea{
+.invite-people textarea {
     padding: 1em;
-text-decoration: none;
-height: 5em;
-border-radius: 0.2em;
+    text-decoration: none;
+    height: 5em;
+    border-radius: 0.2em;
 }
-.invite-people textarea:focus{
+
+.invite-people textarea:focus {
     outline: none;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
 }
 
 
-a{
+a {
     text-decoration: none;
-    
+
 }
-.create-channel-popup{
+
+.create-channel-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     z-index: 9999;
     position: absolute;
     left: 30%;
@@ -444,6 +454,74 @@ a{
     display: none;
     width: 400px;
     height: 250px;
+    padding: 2em;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.setting-adminitration-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    position: absolute;
+    left: 23.7%;
+    top: 22%;
+    display: none;
+    width: 250px;
+    height: 250px;
+    padding: 2em;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.add-workspace-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    position: absolute;
+    left: 23.7%;
+    top: 22%;
+    display: none;
+    width: 200px;
+    height: 125px;
+    padding: 1em;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.edit-workspace-detail-popup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    display: none;
+    width: 400px;
+    height: 350px;
+    padding: 2em;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.switch-workspace-popup {
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    z-index: 9999;
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    display: none;
+    width: 200px;
+    height: 300px;
     padding: 2em;
     background-color: var(--bg-color);
     border-radius: 20px;
