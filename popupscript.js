@@ -1,4 +1,3 @@
-
 const workDetail = document.querySelector('.work-detail');
 const popupContainer = document.querySelector('.popup-container');
 const cancelButton = document.querySelector('.button[data-action="cancel"]');
@@ -39,39 +38,133 @@ cancelButton.addEventListener('click', () => {
 
 //your slack popup
 
- // Get the elements
- const yourSlackButton = document.getElementById('yourSlackButton');
- const yourSlackPopup = document.getElementById('yourSlackPopup');
- 
- // Function to show the popup menu
- function showPopupMenu() {
-     yourSlackPopup.style.display = 'block';
+// Get the elements
+const yourSlackButton = document.getElementById('yourSlackButton');
+const yourSlackPopup = document.getElementById('yourSlackPopup');
+
+// Function to show the popup menu
+function showPopupMenu() {
+    yourSlackPopup.style.display = 'block';
+}
+
+// Function to hide the popup menu
+function hidePopupMenu() {
+    yourSlackPopup.style.display = 'none';
+}
+
+// Event listener for the "Your slack" button click
+yourSlackButton.addEventListener('click', function (event) {
+    event.stopPropagation(); // Prevent the click from propagating to the document
+    if (yourSlackPopup.style.display === 'block') {
+        hidePopupMenu();
+    } else {
+        showPopupMenu();
+    }
+});
+
+// Event listener for clicks outside the popup to close it
+document.addEventListener('click', function (event) {
+    if (!yourSlackPopup.contains(event.target) && yourSlackPopup.style.display === 'block') {
+        hidePopupMenu();
+    }
+});
+
+// Close the popup when the "Sign out" button is clicked
+const signOutButton = yourSlackPopup.querySelector('.button');
+signOutButton.addEventListener('click', function (event) {
+    hidePopupMenu();
+});
+
+
+// profile pop up script
+
+ // JavaScript
+ const imgElement = document.querySelector('.profile-image-nav');
+ const popupElement = document.querySelector('.profile-popup');
+
+ // Function to show the pop-up
+ function showPopups() {
+     popupElement.style.display = 'block';
  }
- 
- // Function to hide the popup menu
- function hidePopupMenu() {
-     yourSlackPopup.style.display = 'none';
+
+ // Function to hide the pop-up
+ function hidePopups() {
+     popupElement.style.display = 'none';
  }
- 
- // Event listener for the "Your slack" button click
- yourSlackButton.addEventListener('click', function(event) {
-     event.stopPropagation(); // Prevent the click from propagating to the document
-     if (yourSlackPopup.style.display === 'block') {
-         hidePopupMenu();
+
+ imgElement.addEventListener('click', function (event) {
+     if (popupElement.style.display === 'block') {
+         hidePopups();
      } else {
-         showPopupMenu();
+         showPopups();
      }
  });
- 
- // Event listener for clicks outside the popup to close it
- document.addEventListener('click', function(event) {
-     if (!yourSlackPopup.contains(event.target) && yourSlackPopup.style.display === 'block') {
-         hidePopupMenu();
+
+ // Event listener to hide the pop-up when clicking outside
+ document.addEventListener('click', function (event) {
+     if (!imgElement.contains(event.target) && !popupElement.contains(event.target)) {
+         hidePopups();
      }
  });
- 
- // Close the popup when the "Sign out" button is clicked
- const signOutButton = yourSlackPopup.querySelector('.button');
- signOutButton.addEventListener('click', function(event) {
-     hidePopupMenu();
- });
+
+
+ //invite people
+
+ const inviteButton = document.querySelector('.invite')
+ const invitePopup = document.querySelector('.invite-people')
+
+  // Function to show the pop-up
+  function inviteShowPopups() {
+    invitePopup.style.display = 'block';
+}
+
+// Function to hide the pop-up
+function inviteHidePopups() {
+    invitePopup.style.display = 'none';
+}
+
+inviteButton.addEventListener('click', function (event) {
+    if (invitePopup.style.display === 'block') {
+        inviteHidePopups();
+    } else {
+        inviteShowPopups();
+    }
+});
+
+// Event listener to hide the pop-up when clicking outside
+document.addEventListener('click', function (event) {
+    if (!inviteButton.contains(event.target) && !invitePopup.contains(event.target)) {
+        inviteHidePopups();
+    }
+});
+
+
+//create-channel-popup
+
+const createChanneButton = document.querySelector('.create-pop')
+ const createChannelShow= document.querySelector('.create-channel-popup')
+
+  // Function to show the pop-up
+  function createShowPopups() {
+    createChannelShow.style.display = 'block';
+}
+
+// Function to hide the pop-up
+function createHidePopups() {
+    createChannelShow.style.display = 'none';
+}
+
+createChanneButton.addEventListener('click', function (event) {
+    if (createChannelShow.style.display === 'block') {
+        createHidePopups();
+    } else {
+        createShowPopups();
+    }
+});
+
+// Event listener to hide the pop-up when clicking outside
+document.addEventListener('click', function (event) {
+    if (!createChanneButton.contains(event.target) && !createChannelShow.contains(event.target)) {
+        createHidePopups();
+    }
+});

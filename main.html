@@ -41,8 +41,10 @@
                         d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
                 </svg>
             </div>
-            <a href="profile.html"><img class="img" src="profile.png" alt="Me"
-                    style=" width: 40px; height:40px; margin-right:2.5em; border-radius:0.5em; cursor:pointer;"></a>
+            <div class="profile-image-nav">
+                <img src="profile.png" alt="Me"
+                    style=" width: 40px; height:40px; margin-right:2.5em; border-radius:0.5em; cursor:pointer;">
+            </div>
         </div>
     </div>
     <!-- side bar -->
@@ -370,7 +372,7 @@
         </div>
     </div>
 
-    <div class="your-slack" id="yourSlackPopup">
+    <div class="your-slack popup" id="yourSlackPopup">
         <div class="column">
             <div class="row">
                 <img class="img" src="profile.png" alt=""
@@ -382,8 +384,8 @@
             </div>
             <div class="mid-content">
                 <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
-                    <span>Invite people to your slack</span>
-                    <span>Create channel</span>
+                    <span class="invite" style="cursor: pointer;">Invite people to your slack</span>
+                    <span class="create-pop" style="cursor: pointer;">Create channel</span>
                 </div>
                 <div class="column" style="border-bottom: 1px solid grey; padding:10px " ;>
                     <span>Setting and administration</span>
@@ -401,8 +403,85 @@
 
     </div>
 
-    
-        
+    <div class="profile-popup">
+
+        <div class="column">
+            <div class="row">
+                <img class="img" src="profile.png" alt="">
+                <div class="column" style="gap: 2px;">
+                    <span style="font-size:1em; font-weight:600 ">Test User</span>
+                    <span style="color:rgb(11, 173, 11); ">Active</span>
+                </div>
+            </div>
+            <div class="column" style="border-bottom: 1px solid grey; padding:10px " ;>
+                <span>Set Yourself away</span>
+                <div class="row" style="justify-content:space-between">
+                    <span>Pause Notifications</span>
+                    <div class="row">
+                        <span>On</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
+                        </svg>
+
+                    </div>
+                </div>
+
+            </div>
+            <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
+                <span>Profile</span>
+                <span>Preference</span>
+            </div>
+            <div class="column">
+                <button class="button" style=" font-size:16px">Sign out</button>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <div class="invite-people popup">
+        <div class="column">
+            <span style="font-size:1em; font-weight:600 ">Invite people</span>
+            <span style="font-size:0.7em; font-weight:600 ">To:</span>
+            <textarea type="text"  placeholder="name@gmail.com"></textarea>
+            <div class="row" style="justify-content: space-between;">
+                <div class="row">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-link-45deg" viewBox="0 0 16 16">
+                        <path d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z"/>
+                        <path d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z"/>
+                      </svg>
+                    <a  style="font-size:1em; color:var(--text-color)"href="">Copy invite link</a>
+                </div>
+                <div class="column">
+                    <button class="button" style=" font-size:16px">Send</button>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="create-channel-popup">
+        <div class="column">
+            <span style="font-size:1em; font-weight:600 ">Create channel</span>
+            <span style="font-size:0.7em; font-weight:600 ">Name</span>
+            <input class="input" type="text"  placeholder="e.g Plan finance">
+            <span>Channels are where conversations happen around a topic. Use a name that is easy to find and understand.</span>
+            <div class="row" style="justify-content: space-between;">
+               
+                <div class="column" style="width: 100%;">
+                    <button class="button" style=" font-size:16px;">Send</button>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+
+
 
 
     <!-- hide sidebar script -->
