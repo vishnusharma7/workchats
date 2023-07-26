@@ -30,22 +30,23 @@ body {
     background-color: var(--bg-color);
     color: var(--text-color);
     overflow-x: hidden;
-    
-}
-::-webkit-scrollbar {
-    width: 5px; 
-  }
-  
 
-  ::-webkit-scrollbar-thumb {
-    background-color: #85818a; 
-    border-radius: 5px; 
-  }
-  
-  
-  ::-webkit-scrollbar-track {
-    background-color: #f0f0f0; 
-  }
+}
+
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #85818a;
+    border-radius: 5px;
+}
+
+
+::-webkit-scrollbar-track {
+    background-color: #f0f0f0;
+}
 
 h1 {
     font-weight: 600;
@@ -158,15 +159,16 @@ img {
 .container1 {
     height: calc(100vh - 48.8px);
     display: flex;
-    
+
 }
 
-.nav{
+.nav {
     position: sticky;
     top: 0;
-   
-    
+
+
 }
+
 .search {
 
     line-height: 1.5em;
@@ -322,11 +324,12 @@ span {
     opacity: 1;
     color: var(--primary-color);
 }
-.work-detail{
+
+.work-detail {
     cursor: pointer;
 }
 
-.popup-container{
+.popup-container {
     display: none;
     position: fixed;
     top: 50%;
@@ -338,8 +341,16 @@ span {
     background-color: var(--bg-color);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
-   
+
 }
+@media screen and (max-width: 768px){
+    .popup-container{
+        width: 350px;
+        height: 350px;
+        
+    }
+}
+
 .dimmed-background {
     position: fixed;
     top: 0;
@@ -351,7 +362,16 @@ span {
     pointer-events: none;
 }
 
-.your-slack{
+/* your slack pop up style */
+
+.img {
+    width: 40px;
+    height: 40px;
+    border-radius: 0.5em;
+    cursor: pointer;
+}
+
+.your-slack {
     width: 300px;
     height: 350px;
     background-color: var(--bg-color);
@@ -360,11 +380,72 @@ span {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
     z-index: 9999;
     display: none;
-    position: absolute; /* Position the popup absolutely */
-    top: 8%; /* Place the popup at the top of the screen */
-    left: 0; 
+    position: absolute;
+    top: 8%;
+    left: 0;
 
 }
-.mid-content span{
+
+.mid-content span {
     font-size: 1em;
+}
+
+.profile-popup {
+    width: 250px;
+    height: 300px;
+    padding: 2em;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+    position: absolute;
+    top: 4%;
+    right: 0;
+    display: none
+}
+.invite-people{
+    z-index: 9999;
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    display: none;
+    width: 400px;
+    height: 250px;
+    padding: 2em;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+   
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+.invite-people textarea{
+    padding: 1em;
+text-decoration: none;
+height: 5em;
+border-radius: 0.2em;
+}
+.invite-people textarea:focus{
+    outline: none;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+
+}
+
+
+a{
+    text-decoration: none;
+    
+}
+.create-channel-popup{
+    z-index: 9999;
+    position: absolute;
+    left: 30%;
+    top: 15%;
+    display: none;
+    width: 400px;
+    height: 250px;
+    padding: 2em;
+    background-color: var(--bg-color);
+    border-radius: 20px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 }
