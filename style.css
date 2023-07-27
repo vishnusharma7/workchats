@@ -1,5 +1,7 @@
 @import "normalize.css";
 
+
+
 @font-face {
     font-family: 'Inter';
     src: url(Inter.ttf);
@@ -14,6 +16,7 @@
     --sub-text-color: #4c4a58;
     --bg-color: #ffffff;
     --border-color: rgb(206, 206, 206);
+    --box-shadow: 0 0 6px rgb(0, 0, 0, 0.5);
 
 }
 
@@ -23,6 +26,9 @@
     --text-color: #ffffff;
     --sub-text-color: #cfcfcf;
     --border-color: rgb(77, 75, 75);
+
+    --box-shadow: 0 0 6px rgb(255, 255, 255, 0.1);
+
     transition: 0.3s;
 }
 
@@ -86,7 +92,7 @@ img {
     width: 400px;
     max-width: calc(100% - 2em);
     margin-top: 10vh;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
     border-radius: 5px;
     padding: 3em 1em;
 }
@@ -248,6 +254,7 @@ span {
             transform: translateX(0);
         }
     }
+    
 
     .chat-content {
 
@@ -339,7 +346,7 @@ span {
     width: 400px;
     height: 350px;
     background-color: var(--bg-color);
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+    box-shadow: var(--box-shadow);
     z-index: 9999;
     border-radius: 20px;
 
@@ -369,11 +376,11 @@ span {
 
 .your-slack {
     width: 300px;
-    height: 350px;
+    height: 300px;
     background-color: var(--bg-color);
     padding: 2em;
     border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
     z-index: 9999;
     display: none;
     position: absolute;
@@ -388,11 +395,11 @@ span {
 
 .profile-popup {
     width: 250px;
-    height: 300px;
+    height: 250px;
     padding: 2em;
     background-color: var(--bg-color);
     border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
     z-index: 9999;
     position: absolute;
     top: 4%;
@@ -416,8 +423,7 @@ span {
     padding: 2em;
     background-color: var(--bg-color);
     border-radius: 20px;
-
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
 
 }
 
@@ -431,7 +437,7 @@ span {
 
 .invite-people textarea:focus {
     outline: none;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
 
 }
 
@@ -456,11 +462,9 @@ a {
     padding: 2em;
     background-color: var(--bg-color);
     border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
 }
-@media  screen and (max-width: 768px){
 
-}
 
 .setting-adminitration-popup {
     display: flex;
@@ -476,7 +480,7 @@ a {
     padding: 2em;
     background-color: var(--bg-color);
     border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
 }
 
 .add-workspace-popup {
@@ -493,7 +497,7 @@ a {
     padding: 1em;
     background-color: var(--bg-color);
     border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
 }
 
 .edit-workspace-detail-popup {
@@ -511,7 +515,7 @@ a {
     padding: 2em;
     background-color: var(--bg-color);
     border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
 }
 
 .switch-workspace-popup {
@@ -520,17 +524,18 @@ a {
     align-items: start;
     z-index: 9999;
     position: absolute;
-    left: 30%;
-    top: 15%;
+    left: 23.7%;
+    top: 21%;
     display: none;
     width: 200px;
-    height: 300px;
+    height: 200px;
     padding: 2em;
     background-color: var(--bg-color);
     border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
 }
-.add-channel-pop-up{
+
+.add-channel-pop-up {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -545,15 +550,143 @@ a {
     padding: 2em;
     background-color: var(--bg-color);
     border-radius: 20px;
-    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--box-shadow);
 }
 
-@media  screen and (max-width: 768px){
-    .invite-people, .create-channel-popup,.edit-workspace-detail-popup,.popup-container,.add-channel-pop-up {
+@media screen and (max-width: 768px) {
+
+    .invite-people,
+    .create-channel-popup,
+    .edit-workspace-detail-popup,
+    .popup-container,
+    .add-channel-pop-up {
         width: 90%;
         height: auto;
-        max-width: 400px; /* Optional: Limit the maximum width for very large screens */
+        max-width: 400px;
+        /* Optional: Limit the maximum width for very large screens */
         padding: 1em;
     }
-    
+
+}
+
+
+/* =========================================================================Manage page css======================================================== */
+.manage-container {
+
+    height: calc(100vh - 80px);
+    display: flex;
+
+}
+
+.navBar {
+    position: sticky;
+    top: 0;
+    width: calc(100% - 4em);
+    background-color: var(--bg-color);
+    border-bottom: 0.05px solid var(--border-color);
+    ;
+
+
+}
+
+
+
+.left-content {
+
+    height: calc(100vh - 100px);
+    padding: 0.5em;
+    flex: 1;
+    background-color: var(--bg-color);
+    min-width: 200px;
+    border-right: 0.05px solid var(--border-color);
+}
+
+.rightBar {
+    flex: 1;
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+
+
+}
+
+.midbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 0.05px solid var(--border-color);
+    border-bottom: 0.05px solid var(--border-color);
+
+}
+
+.right input {
+
+    background-color: var(--bg-color);
+    padding: 0.5em;
+    border-radius: 0.5em;
+    color: var(--text-color);
+}
+
+.right input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.bottomBar {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 0.05px solid var(--border-color);
+    margin: auto;
+}
+
+.firstTable {
+
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+
+
+}
+
+@media (max-width: 768px) {
+    .leftBar {
+        display: none;
+        position: absolute;
+        height: 91.5vh;
+        animation: showSidebars 0.3s ease forwards;
+    }
+
+    @keyframes showSidebars {
+        0% {
+            display: none;
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+
+        100% {
+            display: block;
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    .navBar{
+        width: 100%;
+    }
+    .right-content {
+
+        margin-left: auto;
+        width: 100%;
+        
+       
+
+    }
+
+    .menu-button-leftbar{
+        display: block;
+    }
 }

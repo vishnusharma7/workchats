@@ -13,3 +13,23 @@ menu.addEventListener("click", () => {
 });
 window.addEventListener("resize", handleViewportChange);
 window.addEventListener("DOMContentLoaded", handleViewportChange);
+
+
+
+
+const menuSidebar = document.querySelector(".menu-button-leftbar");
+const sideBarShow = document.querySelector(".leftBar");
+let isMenuOpenSideBar = false;
+
+menuSidebar.addEventListener("click", () => {
+    if (isMenuOpenSideBar) {
+        sideBarShow.style.display = "none";
+        isMenuOpenSideBar = false;
+    } else {
+        sideBarShow.style.display = "block";
+        isMenuOpenSideBar = true;
+    }
+});
+
+// window.addEventListener("resize", handleViewportChange);
+// window.addEventListener("DOMContentLoaded", handleViewportChange);
