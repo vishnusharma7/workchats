@@ -341,16 +341,11 @@ span {
     background-color: var(--bg-color);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
     z-index: 9999;
+    border-radius: 20px;
+
 
 }
 
-@media screen and (max-width: 768px) {
-    .popup-container {
-        width: 350px;
-        height: 350px;
-
-    }
-}
 
 .dimmed-background {
     position: fixed;
@@ -402,7 +397,8 @@ span {
     position: absolute;
     top: 4%;
     right: 0;
-    display: none
+    display: none;
+
 }
 
 .invite-people {
@@ -411,8 +407,9 @@ span {
     align-items: center;
     z-index: 9999;
     position: absolute;
-    left: 30%;
-    top: 15%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     width: 400px;
     height: 250px;
@@ -423,6 +420,7 @@ span {
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
 
 }
+
 
 .invite-people textarea {
     padding: 1em;
@@ -449,8 +447,9 @@ a {
     align-items: center;
     z-index: 9999;
     position: absolute;
-    left: 30%;
-    top: 15%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     width: 400px;
     height: 250px;
@@ -458,6 +457,9 @@ a {
     background-color: var(--bg-color);
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+@media  screen and (max-width: 768px){
+
 }
 
 .setting-adminitration-popup {
@@ -500,8 +502,9 @@ a {
     align-items: center;
     z-index: 9999;
     position: absolute;
-    left: 30%;
-    top: 15%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
     display: none;
     width: 400px;
     height: 350px;
@@ -526,4 +529,14 @@ a {
     background-color: var(--bg-color);
     border-radius: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+@media  screen and (max-width: 768px){
+    .invite-people, .create-channel-popup,.edit-workspace-detail-popup,.popup-container {
+        width: 90%;
+        height: auto;
+        max-width: 400px; /* Optional: Limit the maximum width for very large screens */
+        padding: 1em;
+    }
+    
 }
