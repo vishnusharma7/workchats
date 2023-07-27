@@ -144,6 +144,7 @@ document.addEventListener('click', function (event) {
 const createChanneButton = document.querySelector('.create-pop')
 const createChannelShow = document.querySelector('.create-channel-popup')
 
+
 // Function to show the pop-up
 function createShowPopups() {
     createChannelShow.style.display = 'block';
@@ -293,3 +294,33 @@ document.addEventListener('click', function (event) {
         switchHidePopups();
     }
 });
+
+//add channel popup================================================================================================
+
+const addChannelButton = document.querySelector('.add-channel');
+const addChannelShow = document.querySelector('.add-channel-pop-up');
+
+function addShowPopups() {
+    addChannelShow.style.display = 'block';
+}
+
+// Function to hide the pop-up
+function addHidePopups() {
+    addChannelShow.style.display = 'none';
+}
+
+addChannelButton.addEventListener('click', function (event) {
+    if (addChannelShow.style.display === 'block') {
+        addHidePopups();
+    } else {
+        addShowPopups();
+    }
+});
+
+// Event listener to hide the pop-up when clicking outside
+document.addEventListener('click', function (event) {
+    if (!addChannelButton.contains(event.target) && !addChannelShow.contains(event.target)) {
+        addHidePopups();
+    }
+});
+
