@@ -1,5 +1,6 @@
 // Function to handle the file selection
-function handleFileSelect(event) {
+function handleFileSelect(event) 
+  {
     const file = event.target.files[0]; // Get the selected file
   
     if (file) {
@@ -23,6 +24,15 @@ function handleFileSelect(event) {
     fileInput.addEventListener('change', handleFileSelect);
     fileInput.click(); // Simulate a click on the file input element
   });
+
+
+
+
+
+
+  
+
+
 
 
 
