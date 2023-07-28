@@ -16,3 +16,6 @@ document.addEventListener("click", (event) => {
     isMenuOpenthread = false;
   }
 });
+window.addEventListener("resize", handleViewportChange);
+window.addEventListener("DOMContentLoaded", handleViewportChange);
+

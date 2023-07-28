@@ -165,9 +165,7 @@ img {
 .container1 {
     height: calc(100vh - 48.8px);
     display: flex;
-    flex:1
-
-
+    flex: 1
 }
 
 .nav {
@@ -234,9 +232,9 @@ span {
 
 .chat-content {
     padding: 1em;
-   
+
     flex: 1;
-  
+
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
@@ -244,6 +242,7 @@ span {
     border-right: 0.05px solid var(--border-color);
 
 }
+
 .message-container {
     flex: 1;
     overflow-y: auto;
@@ -270,7 +269,7 @@ span {
             transform: translateX(0);
         }
     }
-    
+
 
     .chat-content {
 
@@ -310,6 +309,18 @@ span {
     display: none;
 }
 
+/* ========================================sender reciever ====================== */
+.sender, .receiver {
+    max-width: 98%; /* Adjust the maximum width as needed */
+}
+.sender{
+    justify-content: flex-end;
+    align-items: flex-start;
+}
+.receiver{
+    justify-content: flex-start;
+    align-items: flex-start;
+}
 @media (max-width: 768px) {
     .search-icon {
         display: block;
@@ -348,18 +359,91 @@ span {
     opacity: 1;
     color: var(--primary-color);
 }
-/* Thread=================================== */
-.thread{
+
+/* =========================Thread=================================== */
+.thread {
     padding: 1em;
-   display: block;
+    display: block;
     flex: 1;
- 
     background-color: var(--bg-color);
     display: flex;
     flex-direction: column;
     border-top: 0.05px solid var(--border-color);
     border-right: 0.05px solid var(--border-color);
+    display: none;
+    
 }
+
+/* ===========================input box design============== */
+.input-msg {
+    
+    background-color: var(--bg-color);
+   
+    border-radius: 0.5em;
+    display: flex;
+    padding: 0.5em;
+    flex-direction: column;
+   
+    justify-content: space-between;
+    border: 0.05px solid var(--border-color);
+    
+
+}
+.input-msg svg{
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+   
+}
+
+
+
+.textStyle {
+    
+   
+    display: flex;
+    gap:1em;
+  
+  
+    align-items: center;
+    /* width: 100%; */
+}
+
+.midinput input {
+    font-size: 1.2em;
+    border: none ;
+    background-color: var(--bg-color);
+   width: calc(100% - 0.5em);
+    color: var(--text-color)
+}
+.midinput input:focus {
+   outline: none;
+   border: 0px solid var(--border-color);
+
+}
+.leftattachment{
+    display: flex;
+    gap:1em;
+    cursor: pointer;
+  
+    align-items: center;
+}
+.attachement{
+    display: flex;
+   justify-content: space-between;
+
+}
+.rightbutton svg{
+   width: 25px;
+    height: 25px;
+    cursor: pointer;
+
+ /* background-color: var(--primary-color); */
+ margin: auto;
+   
+}
+
+
 
 
 
@@ -707,9 +791,11 @@ a {
             transform: translateX(0);
         }
     }
-    .navBar{
+
+    .navBar {
         width: 100%;
     }
+
     .right-content {
 
         margin-left: auto;
@@ -717,12 +803,7 @@ a {
 
     }
 
-    .menu-button-leftbar{
+    .menu-button-leftbar {
         display: block;
     }
 }
-
-
-
-
-
