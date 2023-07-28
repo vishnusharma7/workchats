@@ -348,8 +348,18 @@ span {
     opacity: 1;
     color: var(--primary-color);
 }
-
-/* =======================================Thread======================================== */
+/* Thread=================================== */
+.thread{
+    padding: 1em;
+   display: block;
+    flex: 1;
+ 
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    border-top: 0.05px solid var(--border-color);
+    border-right: 0.05px solid var(--border-color);
+}
 
 
 
