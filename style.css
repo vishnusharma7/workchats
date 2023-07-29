@@ -255,6 +255,7 @@ span {
         height: 91.5vh;
         animation: showSidebar 0.3s ease forwards;
     }
+   
 
     @keyframes showSidebar {
         0% {
@@ -310,17 +311,26 @@ span {
 }
 
 /* ========================================sender reciever ====================== */
-.sender, .receiver {
-    max-width: 98%; /* Adjust the maximum width as needed */
+.sender,
+.receiver {
+    max-width: 98%;
+    /* Adjust the maximum width as needed */
 }
-.sender{
+.sender-name-time{
+    justify-content:flex-end;
+}
+
+.sender {
+    
     justify-content: flex-end;
     align-items: flex-start;
 }
-.receiver{
+
+.receiver {
     justify-content: flex-start;
     align-items: flex-start;
 }
+
 @media (max-width: 768px) {
     .search-icon {
         display: block;
@@ -371,77 +381,86 @@ span {
     border-top: 0.05px solid var(--border-color);
     border-right: 0.05px solid var(--border-color);
     display: none;
-    
+
 }
 
 /* ===========================input box design============== */
 .input-msg {
-    
+
     background-color: var(--bg-color);
-   
+
     border-radius: 0.5em;
     display: flex;
     padding: 0.5em;
     flex-direction: column;
-   
+
     justify-content: space-between;
     border: 0.05px solid var(--border-color);
-    
+
 
 }
-.input-msg svg{
+
+.input-msg svg {
     width: 18px;
     height: 18px;
     cursor: pointer;
-   
+    display: none;
+    /* display: block; */
+
 }
 
 
 
 .textStyle {
-    
-   
     display: flex;
-    gap:1em;
-  
-  
+    gap: 1em;
     align-items: center;
     /* width: 100%; */
 }
 
+
+
 .midinput input {
     font-size: 1.2em;
-    border: none ;
+    border: none;
     background-color: var(--bg-color);
-   width: calc(100% - 0.5em);
+    width: calc(100% - 0.5em);
     color: var(--text-color)
 }
+
 .midinput input:focus {
-   outline: none;
-   border: 0px solid var(--border-color);
+    outline: none;
+    border: 0px solid var(--border-color);
 
 }
-.leftattachment{
+
+.attachement {
     display: flex;
-    gap:1em;
+    justify-content: space-between;
+    
+
+}
+.leftattachment {
+    display: flex;
+    gap: 1em;
+    flex:1;
     cursor: pointer;
-  
     align-items: center;
+  
 }
-.attachement{
-    display: flex;
-   justify-content: space-between;
 
-}
-.rightbutton svg{
-   width: 25px;
+
+.rightbutton svg {
+    width: 25px;
     height: 25px;
     cursor: pointer;
+    flex:1;
 
- /* background-color: var(--primary-color); */
- margin: auto;
-   
 }
+
+
+
+
 
 
 
