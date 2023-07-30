@@ -467,7 +467,7 @@ span {
     height: 18px;
     cursor: pointer;
 
-    /* display: none; */
+
 
 }
 
@@ -487,8 +487,8 @@ span {
     display: none;
     bottom: 0;
     margin-bottom: 5em;
-
-    /* display: none; */
+    cursor: pointer;
+    display: none;
     /* width: 100%; */
 }
 
