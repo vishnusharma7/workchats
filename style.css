@@ -7,7 +7,6 @@
 }
 
 
-
 :root {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --primary-color: #7921de;
@@ -23,22 +22,21 @@
 
 
 .dark {
+
     --bg-color: #2d2d2d;
     --text-color: #ffffff;
     --sub-text-color: #cfcfcf;
     --border-color: rgb(77, 75, 75);
-
     --box-shadow: 0 0 6px rgb(255, 255, 255, 0.1);
     --message-text-bg: rgba(160, 159, 161, 0.1);
-
     transition: 0.3s;
+
 }
 
 body {
     background-color: var(--bg-color);
     color: var(--text-color);
     overflow-x: hidden;
-
 }
 
 ::-webkit-scrollbar {
@@ -161,8 +159,6 @@ img {
 }
 
 
-
-
 /* Main class */
 .container1 {
     height: calc(100vh - 48.8px);
@@ -173,13 +169,10 @@ img {
 .nav {
     position: sticky;
     top: 0;
-
-
 }
 
 
 .search {
-
     line-height: 1.5em;
     align-items: center;
     width: 100%;
@@ -192,7 +185,6 @@ img {
     padding: 0 15px;
     font-size: 1.2em;
     outline: none;
-
 }
 
 .search:focus {
@@ -326,7 +318,7 @@ span {
     display: none;
 }
 
-/* ========================================sender reciever ====================== */
+/* ================================================sender reciever ================================================== */
 
 .sender,
 .receiver {
@@ -356,9 +348,7 @@ span {
 
 .receiver-text {
     padding: 1em;
-
     background-color: var(--message-text-bg);
-
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
@@ -388,7 +378,6 @@ span {
         cursor: pointer;
     }
 
-
     .search {
         display: none;
     }
@@ -410,7 +399,6 @@ span {
     transition: opacity 0.3s;
     font-size: 1em;
     font-weight: bold;
-
 }
 
 .logo:hover .bi-chat-dots {
@@ -424,8 +412,8 @@ span {
 
 /* =========================Thread=================================== */
 .thread {
-    padding: 1em;
 
+    padding: 1em;
     flex: 1;
     background-color: var(--bg-color);
     display: flex;
@@ -438,14 +426,13 @@ span {
 
 /* ===========================input box design============== */
 .input-msg {
-
     background-color: var(--bg-color);
     display: flex;
-    /* padding: 0.5em; */  
+    /* padding: 0.5em; */
     flex-direction: column;
     gap: 0.5em;
     /* border: 0.05px solid var(--border-color); */
-    
+
 }
 
 .midinput {
@@ -477,7 +464,7 @@ span {
     height: 18px;
     cursor: pointer;
     display: none;
-    /* display: block; */
+   
 }
 
 
