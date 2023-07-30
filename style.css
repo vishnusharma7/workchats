@@ -6,6 +6,8 @@
     font-display: swap;
 }
 
+
+
 :root {
     font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --primary-color: #7921de;
@@ -15,9 +17,8 @@
     --bg-color: #ffffff;
     --border-color: rgb(206, 206, 206);
     --box-shadow: 0 0 6px rgb(0, 0, 0, 0.5);
-   
     --message-text-bg: rgba(158, 154, 159, 0.1);
-   
+
 }
 
 
@@ -215,21 +216,26 @@ span {
     font-size: 0.8em;
     font-weight: 500;
 }
+
 .img {
     width: 40px;
     height: 40px;
     border-radius: 2em;
     cursor: pointer;
 }
-.message-owner{
-    font-weight:600
+
+.message-owner {
+    font-weight: 600
 }
-.message-time{
-    font-size: 0.7em; color:var(--sub-text-color);
+
+.message-time {
+    font-size: 0.7em;
+    color: var(--sub-text-color);
     font-weight: 400;
 }
-.messagetext{
-   
+
+.messagetext {
+
     font-size: 16px;
     font-weight: 400;
 }
@@ -267,7 +273,7 @@ span {
 .message-container {
     flex: 1;
     overflow-y: auto;
-    
+
 }
 
 @media (max-width: 768px) {
@@ -277,7 +283,7 @@ span {
         height: 91.5vh;
         animation: showSidebar 0.3s ease forwards;
     }
-   
+
 
     @keyframes showSidebar {
         0% {
@@ -327,54 +333,61 @@ span {
     max-width: 99%;
     /* Adjust the maximum width as needed */
 }
-.sender-name-time{
-    justify-content:flex-end;
+
+.sender-name-time {
+    justify-content: flex-end;
 }
 
 .sender {
-    
+
     justify-content: flex-end;
     align-items: flex-start;
     max-width: 50%;
-    margin-left: auto; 
-    
+    margin-left: auto;
+
 }
 
 .receiver {
-    
+
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 50%;
 }
-.receiver-text{
+
+.receiver-text {
     padding: 1em;
-  
+
     background-color: var(--message-text-bg);
-  
+
     border-top-right-radius: 1em;
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
 }
-.sender-text{
+
+.sender-text {
     padding: 1em;
-  
+
     background-color: var(--message-text-bg);
-   
+
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
     border-top-left-radius: 1em;
 }
+
 @media (max-width: 1200px) {
-    .receiver, .sender {
+
+    .receiver,
+    .sender {
         max-width: 80%;
     }
 }
+
 @media (max-width: 768px) {
     .search-icon {
         display: block;
         cursor: pointer;
     }
-  
+
 
     .search {
         display: none;
@@ -412,7 +425,7 @@ span {
 /* =========================Thread=================================== */
 .thread {
     padding: 1em;
-    
+
     flex: 1;
     background-color: var(--bg-color);
     display: flex;
@@ -427,21 +440,17 @@ span {
 .input-msg {
 
     background-color: var(--bg-color);
-
-    
     display: flex;
-    /* padding: 0.5em; */
+    /* padding: 0.5em; */  
     flex-direction: column;
     gap: 0.5em;
-    
-    
     /* border: 0.05px solid var(--border-color); */
-
-
+    
 }
-.midinput{
+
+.midinput {
     display: flex;
-    flex:1;
+    flex: 1;
     padding: 0.5em;
     align-items: center;
     border: 0.05px solid var(--border-color);
@@ -449,6 +458,7 @@ span {
     justify-content: space-between;
 
 }
+
 .chatbox-msg {
     width: 100%;
     border: 2px solid var(--text-color);
@@ -460,7 +470,6 @@ span {
     color: var(--text-color);
     font-size: 1.2em;
     outline: none;
-
 }
 
 .input-msg svg {
@@ -468,9 +477,7 @@ span {
     height: 18px;
     cursor: pointer;
     display: none;
-    
     /* display: block; */
-
 }
 
 
@@ -479,8 +486,6 @@ span {
     display: flex;
     gap: 1em;
     align-items: center;
-   
-    
     /* width: 100%; */
 }
 
@@ -493,7 +498,8 @@ span {
     width: calc(100% - 0.5em);
     color: var(--text-color)
 }
-.midinput svg{
+
+.midinput svg {
     display: flex;
 }
 
@@ -513,10 +519,9 @@ span {
 .leftattachment {
     display: flex;
     gap: 1em;
-    flex:1;
+    flex: 1;
     cursor: pointer;
     align-items: center;
-  
 }
 
 
@@ -524,17 +529,9 @@ span {
     width: 25px;
     height: 25px;
     cursor: pointer;
-    flex:1;
+    flex: 1;
 
 }
-
-
-
-
-
-
-
-
 
 .work-detail {
     cursor: pointer;
@@ -553,8 +550,6 @@ span {
     box-shadow: var(--box-shadow);
     z-index: 9999;
     border-radius: 20px;
-
-
 }
 
 
@@ -570,8 +565,6 @@ span {
 }
 
 /* your slack pop up style */
-
-
 
 .your-slack {
     width: 300px;
@@ -623,7 +616,6 @@ span {
     background-color: var(--bg-color);
     border-radius: 20px;
     box-shadow: var(--box-shadow);
-
 }
 
 
