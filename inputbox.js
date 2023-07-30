@@ -1,23 +1,15 @@
 const inputField = document.querySelector('.chatbox-msg');
-const textStyles = document.querySelector('.input-msg');
+const textStyles = document.querySelector('.textStyle');
 
 inputField.addEventListener('click', (event) => {
-    const svgs = textStyles.querySelectorAll('svg:not(.rightbutton svg)');
-    svgs.forEach(svg => {
-        svg.style.display = 'block';
-    });
-
+    textStyles.style.display = 'flex';
     event.stopPropagation();
 });
 
-// Hiding the SVGs when clicking outside the inputField
+//Hide when click outside
 document.addEventListener('click', (event) => {
-    if (!inputField.contains(event.target)) {
-        const svgs = textStyles.querySelectorAll('svg:not(.rightbutton svg)');
-        svgs.forEach(svg => {
-            svg.style.display = 'none';
-        });
+    if (!event.target.matches('.textStyle')) {
+        textStyles.style.display = 'none';
     }
 });
-
 

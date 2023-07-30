@@ -430,7 +430,8 @@ span {
     display: flex;
     /* padding: 0.5em; */
     flex-direction: column;
-    gap: 0.5em;
+
+
     /* border: 0.05px solid var(--border-color); */
 
 }
@@ -443,6 +444,7 @@ span {
     border: 0.05px solid var(--border-color);
     border-radius: 0.5em;
     justify-content: space-between;
+
 
 }
 
@@ -457,22 +459,36 @@ span {
     color: var(--text-color);
     font-size: 1.2em;
     outline: none;
+
 }
 
 .input-msg svg {
     width: 18px;
     height: 18px;
     cursor: pointer;
-    display: none;
-   
+
+    /* display: none; */
+
 }
 
 
 
 .textStyle {
+    max-width: 55%;
     display: flex;
+    flex-wrap: wrap;
     gap: 1em;
     align-items: center;
+    position: absolute;
+    background-color: var(--bg-color);
+    padding: 0.5em;
+    border: 0.5px solid var(--border-color);
+    border-radius: 0.5em;
+    display: none;
+    bottom: 0;
+    margin-bottom: 5em;
+
+    /* display: none; */
     /* width: 100%; */
 }
 
