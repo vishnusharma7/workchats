@@ -6,10 +6,9 @@ inputField.addEventListener('click', (event) => {
     event.stopPropagation();
 });
 
-//Hide when click outside
+// Hide when click outside, but don't close when clicking on textStyle itself or its children
 document.addEventListener('click', (event) => {
-    if (!event.target.matches('.textStyle')) {
+    if (!textStyles.contains(event.target)) {
         textStyles.style.display = 'none';
     }
 });
-
