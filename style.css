@@ -264,6 +264,7 @@ span {
     flex: 1;
     overflow-y: auto;
 
+
 }
 
 @media (max-width: 768px) {
@@ -360,6 +361,25 @@ span {
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
     border-top-left-radius: 1em;
+}
+
+.message-options{
+    background-color: var(--bg-color);
+    position: absolute;
+   margin-left: 7em;
+   margin-bottom: 1em;
+    display: flex;
+    flex-wrap:wrap;
+    align-items: center;
+    gap:1em;
+    display: none;
+    padding: 0.5em;
+    border-radius: 0.5em;
+    border:  0.5px solid var(--border-color);
+    
+}
+.message-options svg{
+    cursor: pointer;
 }
 
 @media (max-width: 1200px) {
