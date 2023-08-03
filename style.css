@@ -363,22 +363,23 @@ span {
     border-top-left-radius: 1em;
 }
 
-.message-options{
+.message-options {
     background-color: var(--bg-color);
     position: absolute;
-   margin-left: 7em;
-   margin-bottom: 1em;
+    margin-left: 7em;
+    margin-bottom: 1em;
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     align-items: center;
-    gap:1em;
+    gap: 1em;
     display: none;
     padding: 0.5em;
     border-radius: 0.5em;
-    border:  0.5px solid var(--border-color);
-    
+    border: 0.5px solid var(--border-color);
+
 }
-.message-options svg{
+
+.message-options svg {
     cursor: pointer;
 }
 
@@ -509,10 +510,10 @@ span {
     /* width: 100%; */
 }
 
-@media  screen and (max-width: 768px){
-    .textStyle{
+@media screen and (max-width: 768px) {
+    .textStyle {
         position: absolute;
-        
+
     }
 }
 
