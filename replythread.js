@@ -29,3 +29,5 @@
 
   window.addEventListener("resize", handleViewportChange);
   window.addEventListener("DOMContentLoaded", handleViewportChange);
+
+  

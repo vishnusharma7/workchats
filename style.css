@@ -343,6 +343,7 @@ span {
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 50%;
+  
 }
 
 .receiver-text {
@@ -363,24 +364,62 @@ span {
     border-top-left-radius: 1em;
 }
 
+
+
+.message-head-content {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+}
+.forward-share-container {
+    position: relative;
+}
+
+.forward-share-thread {
+    position:absolute;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    display: none;
+    margin-left: -0.8em;
+    margin-top: -0.5em;
+}
+
 .message-options {
+
     background-color: var(--bg-color);
     position: absolute;
-    margin-left: 7em;
-    margin-bottom: 1em;
+    margin-left: 1em;
+    margin-bottom: -11em;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
-    align-items: center;
+    /* align-items: center; */
     gap: 1em;
     display: none;
-    padding: 0.5em;
+    padding: 1em 1em;
     border-radius: 0.5em;
     border: 0.5px solid var(--border-color);
+    z-index: 9999;
 
 }
 
+.message-options-elements {
+    display: flex;
+    align-items: center;
+    /* flex-wrap: wrap; */
+
+}
+
+
+
 .message-options svg {
     cursor: pointer;
+}
+
+.messagetext.receiver-text:hover+.forward-share-thread,
+.forward-share-thread:hover {
+    display: flex;
 }
 
 @media (max-width: 1200px) {
@@ -398,6 +437,9 @@ span {
     }
 
     .search {
+        display: none;
+    }
+    .message-options-elements span{
         display: none;
     }
 
@@ -449,6 +491,8 @@ span {
     display: flex;
     /* padding: 0.5em; */
     flex-direction: column;
+    position: relative;
+
 
 
     /* border: 0.05px solid var(--border-color); */
@@ -490,32 +534,28 @@ span {
 
 }
 
-
+.textStyle-container{
+    position: relative;
+}
 
 .textStyle {
+    position: absolute;
     max-width: 55%;
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
     align-items: center;
-    position: absolute;
     background-color: var(--bg-color);
     padding: 0.5em;
     border: 0.5px solid var(--border-color);
     border-radius: 0.5em;
-    bottom: 0;
-    margin-bottom: 5em;
     cursor: pointer;
+    margin-top: -2.3em;
     display: none;
     /* width: 100%; */
 }
 
-@media screen and (max-width: 768px) {
-    .textStyle {
-        position: absolute;
 
-    }
-}
 
 
 
