@@ -343,7 +343,7 @@ span {
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 50%;
-  
+
 }
 
 .receiver-text {
@@ -370,36 +370,44 @@ span {
     display: flex;
     position: relative;
     justify-content: space-between;
+    align-items: center;
 }
+
 .forward-share-container {
-    position: relative;
+   position:relative;
+  
+  
 }
 
 .forward-share-thread {
-    position:absolute;
+    position: absolute;
     display: flex;
-    align-items: center;
     cursor: pointer;
     display: none;
-    margin-left: -0.8em;
+    margin-left: -5em;
     margin-top: -0.5em;
+   
+   gap: 0.6em;
+  
+ 
 }
 
 .message-options {
 
     background-color: var(--bg-color);
     position: absolute;
-    margin-left: 1em;
+    margin-left: 5.5em;
+    margin-top: 1em;
     margin-bottom: -11em;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    /* align-items: center; */
     gap: 1em;
     display: none;
     padding: 1em 1em;
     border-radius: 0.5em;
     border: 0.5px solid var(--border-color);
+    
     z-index: 9999;
 
 }
@@ -439,7 +447,8 @@ span {
     .search {
         display: none;
     }
-    .message-options-elements span{
+
+    .message-options-elements span {
         display: none;
     }
 
@@ -534,7 +543,7 @@ span {
 
 }
 
-.textStyle-container{
+.textStyle-container {
     position: relative;
 }
 
