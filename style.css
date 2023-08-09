@@ -422,7 +422,7 @@ span {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    display: none;
+    opacity: 0;
     gap: 1em;
     padding: 1em 1em;
     border-radius: 0.5em;
@@ -447,8 +447,8 @@ span {
     opacity: 1;
 }
 
-.forward-share-container:hover {
-   display: flex;
+.forward-share-container:hover .message-options{
+   opacity: 1;
  
 }
 
