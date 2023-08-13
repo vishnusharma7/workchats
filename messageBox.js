@@ -126,29 +126,55 @@ class MessageBoxComponent extends HTMLElement {
   
 
     document.addEventListener('DOMContentLoaded', () => {
+
       const messageBoxElement1 = document.getElementById('messageBox1');
       const messageData1 = {
         owner: 'Alice',
         time: '6:51 PM',
-        text: 'First message'
+        text: 'First message from component'
       };
       messageBoxElement1.setMessageData(messageData1);
+
 
       const messageBoxElement2 = document.getElementById('messageBox2');
       const messageData2 = {
         owner: 'Alice',
         time: '8:33 AM',
-        text: 'second message'
+        text: 'second message here we go'
       };
       messageBoxElement2.setMessageData(messageData2);
 
+      
       const messageBoxElement3 = document.getElementById('messageBox3');
       const messageData3 = {
         owner: 'Alice',
         time: '8:36 AM',
-        text: 'third message'
+        text: 'third message and this is also working hiii'
       };
       messageBoxElement3.setMessageData(messageData3);
+
+      const messageBoxElement4 = document.getElementById('messageBox4');
+      const messageData4 = {
+        owner: 'Alice',
+        time: '8:36 AM',
+        text: 'forth message and this is also working hi'
+      };
+      messageBoxElement4.setMessageData(messageData4);
+
+
+      const messageBoxElement5 = document.getElementById('messageBox5');
+      const messageData5 = {
+        owner: 'Alice',
+        time: '8:36 AM',
+        text: 'fifth message and this is also working '
+      };
+      messageBoxElement5.setMessageData(messageData5);
+
+    
+
+
+
+
     });
  
 
