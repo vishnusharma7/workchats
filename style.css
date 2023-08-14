@@ -21,11 +21,12 @@
     --box-shadow: 0 0 6px rgb(0, 0, 0, 0.5);
     --message-text-bg: rgba(158, 154, 159, 0.1);
 
+
 }
 
 
 .dark {
-    --bg-color: #2d2d2d;
+    --bg-color: #232627;
     --text-color: #ffffff;
     --sub-text-color: #cfcfcf;
     --sidebar: rgb(21, 24, 25);
@@ -179,7 +180,7 @@ img {
 
 /* ======================================Main class============================= */
 .container1 {
-    height: calc(100vh - 48.8px);
+    height: calc(100vh - 44.5px);
     display: flex;
     flex: 1
 }
