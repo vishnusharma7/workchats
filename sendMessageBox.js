@@ -33,15 +33,5 @@ class SendMessageBoxComponent extends HTMLElement {
   }
   
   customElements.define("send-messagebox", SendMessageBoxComponent);
-  
-  document.addEventListener("DOMContentLoaded", () => {
-    const sendMessageBoxElement1 = document.getElementById("sendmessageBox1");
-    const sendmessageData1 = {
-      owner: "You",
-      time: "6:51 PM",
-      text: "First message from sender component",
-    };
-    sendMessageBoxElement1.setSendMessageData(sendmessageData1);
-  
-  });
+
   
