@@ -1,9 +1,9 @@
 class MessageBoxComponent extends HTMLElement {
-    constructor() {
-      super();
-  
-      const template = document.createElement('template');
-      template.innerHTML = `
+  constructor() {
+    super();
+
+    const template = document.createElement("template");
+    template.innerHTML = `
         <link rel="stylesheet" href="style.css">
         <div class="row receiver">
           <img class="img" src="receiver.jpeg" alt="">
@@ -105,80 +105,71 @@ class MessageBoxComponent extends HTMLElement {
           </div>
         </div>
       `;
-  
-      const shadowRoot = this.attachShadow({ mode: 'open' });
-      shadowRoot.appendChild(template.content.cloneNode(true));
-    }
-  
-    setMessageData(data) {
-      const shadowRoot = this.shadowRoot;
-      const ownerElement = shadowRoot.querySelector('.message-owner');
-      const timeElement = shadowRoot.querySelector('.message-time');
-      const textElement = shadowRoot.querySelector('.receiver-text');
-  
-      ownerElement.textContent = data.owner || '';
-      timeElement.textContent = data.time || '';
-      textElement.textContent = data.text || '';
-    }
+
+    const shadowRoot = this.attachShadow({ mode: "open" });
+    shadowRoot.appendChild(template.content.cloneNode(true));
   }
-  
-  customElements.define('message-box', MessageBoxComponent);
-  
 
-    document.addEventListener('DOMContentLoaded', () => {
+  setMessageData(data) {
+    const shadowRoot = this.shadowRoot;
+    const ownerElement = shadowRoot.querySelector(".message-owner");
+    const timeElement = shadowRoot.querySelector(".message-time");
+    const textElement = shadowRoot.querySelector(".receiver-text");
 
-      const messageBoxElement1 = document.getElementById('messageBox1');
-      const messageData1 = {
-        owner: 'Alice',
-        time: '6:51 PM',
-        text: 'First message from component'
-      };
-      messageBoxElement1.setMessageData(messageData1);
+    ownerElement.textContent = data.owner || "";
+    timeElement.textContent = data.time || "";
+    textElement.textContent = data.text || "";
+  }
+}
 
+customElements.define("message-box", MessageBoxComponent);
 
-      const messageBoxElement2 = document.getElementById('messageBox2');
-      const messageData2 = {
-        owner: 'Alice',
-        time: '8:33 AM',
-        text: 'second message here we go'
-      };
-      messageBoxElement2.setMessageData(messageData2);
-
-      
-      const messageBoxElement3 = document.getElementById('messageBox3');
-      const messageData3 = {
-        owner: 'Alice',
-        time: '8:36 AM',
-        text: 'third message and this is also working hiii'
-      };
-      messageBoxElement3.setMessageData(messageData3);
-
-      const messageBoxElement4 = document.getElementById('messageBox4');
-      const messageData4 = {
-        owner: 'Alice',
-        time: '8:36 AM',
-        text: 'forth message and this is also working hi'
-      };
-      messageBoxElement4.setMessageData(messageData4);
+document.addEventListener("DOMContentLoaded", () => {
+  const messageBoxElement1 = document.getElementById("messageBox1");
+  const messageData1 = {
+    owner: "Alice",
+    time: "6:51 PM",
+    text: "First message from receiver component",
+  };
+  messageBoxElement1.setMessageData(messageData1);
 
 
-      const messageBoxElement5 = document.getElementById('messageBox5');
-      const messageData5 = {
-        owner: 'Alice',
-        time: '8:36 AM',
-        text: 'fifth message and this is also working '
-      };
-      messageBoxElement5.setMessageData(messageData5);
-
-    
+});
 
 
 
 
-    });
- 
 
 
-s
 
-  
+  // const messageBoxElement2 = document.getElementById("messageBox2");
+  // const messageData2 = {
+  //   owner: "Alice",
+  //   time: "8:33 AM",
+  //   text: "second message here we go",
+  // };
+  // messageBoxElement2.setMessageData(messageData2);
+
+  // const messageBoxElement3 = document.getElementById("messageBox3");
+  // const messageData3 = {
+  //   owner: "Alice",
+  //   time: "8:36 AM",
+  //   text: "third message and this is also working hiii",
+  // };
+  // messageBoxElement3.setMessageData(messageData3);
+
+  // const messageBoxElement4 = document.getElementById("messageBox4");
+  // const messageData4 = {
+  //   owner: "Alice",
+  //   time: "8:36 AM",
+  //   text: "forth message and this is also working hi",
+  // };
+  // messageBoxElement4.setMessageData(messageData4);
+
+  // const messageBoxElement5 = document.getElementById("messageBox5");
+  // const messageData5 = {
+  //   owner: "Alice",
+  //   time: "8:36 AM",
+  //   text: "fifth message and this is also working ",
+  // };
+  // messageBoxElement5.setMessageData(messageData5);
