@@ -102,7 +102,9 @@ img {
     border-radius: 5px;
     padding: 3em 1em;
 }
-
+.logo-main{
+    width:40px; height:40px
+}
 .input {
     line-height: 1.87em;
     display: flex;
@@ -510,6 +512,7 @@ span {
     position: relative;
     display: inline-block;
     cursor: pointer;
+
 }
 
 .logo .text {
@@ -532,6 +535,7 @@ span {
     opacity: 1;
     color: transparent;
     -webkit-text-stroke: 0.9px var(--text-color);
+    
 }
 
 /* =========================Thread=================================== */
