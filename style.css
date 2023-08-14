@@ -14,6 +14,9 @@
     --text-color: #2d2d2d;
     --sub-text-color: #4c4a58;
     --bg-color: #ffffff;
+    --sidebar: #ffff;
+    --message: rgb(255, 255, 255);
+    --nav: #fff;
     --border-color: rgb(206, 206, 206);
     --box-shadow: 0 0 6px rgb(0, 0, 0, 0.5);
     --message-text-bg: rgba(158, 154, 159, 0.1);
@@ -22,10 +25,12 @@
 
 
 .dark {
-
     --bg-color: #2d2d2d;
     --text-color: #ffffff;
     --sub-text-color: #cfcfcf;
+    --sidebar: rgb(21, 24, 25);
+    --nav: #141718;
+    --message: #232627;
     --border-color: rgb(77, 75, 75);
     --box-shadow: 0 0 6px rgb(255, 255, 255, 0.1);
     --message-text-bg: rgba(160, 159, 161, 0.1);
@@ -144,15 +149,16 @@ img {
     padding: 1em 0;
 }
 
-.image-box{
-  
+.image-box {
+
     border-radius: 0.5em;
     overflow: auto;
     transition: all ease 1s;
-   
-   
+
+
 }
-.image-box:hover{
+
+.image-box:hover {
     scale: 1.1;
 }
 
@@ -181,6 +187,15 @@ img {
 .nav {
     position: sticky;
     top: 0;
+    background-color: var(--nav);
+    
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+   
+    
 }
 
 
@@ -190,7 +205,7 @@ img {
     width: 100%;
     max-width: 50%;
     border-radius: 0.5em;
-    background-color: var(--bg-color);
+    background-color: var(--nav);
     border-color: var(--sub-text-color);
     color: var(--text-color);
     border: 1.7px solid var(--text-color);
@@ -255,16 +270,17 @@ span {
 .sidebar {
     padding: 0.6em;
     flex: 0.1;
-    background-color: var(--bg-color);
+    background-color: var(--sidebar);
     min-width: 200px;
     border-top: 0.05px solid var(--border-color);
     border-right: 0.05px solid var(--border-color);
+    z-index: 999;
 }
 
 .chat-content {
     padding: 1em;
     flex: 1;
-    background-color: var(--bg-color);
+    background-color: var(--message);
     display: flex;
     flex-direction: column;
     border-top: 0.05px solid var(--border-color);
@@ -387,7 +403,7 @@ span {
 
 .forward-share-container {
     position: relative;
-  
+
 
 
 
@@ -399,9 +415,9 @@ span {
     display: flex;
     cursor: pointer;
     margin: auto;
-   
+
     /* display: none; */
-   
+
     margin-left: -5em;
     margin-top: -0.5em;
 
@@ -413,12 +429,12 @@ span {
 
 .message-options {
 
-    background-color: var(--bg-color);
+    background-color: var(--message);
     position: absolute;
-    
+
     margin-left: 0.5em;
     margin-top: 1em;
-  
+
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -430,6 +446,7 @@ span {
     z-index: 9999;
 
 }
+
 .message-options-elements {
     display: flex;
     align-items: center;
@@ -437,19 +454,21 @@ span {
     /* flex-wrap: wrap; */
 
 }
-.three-option-visible{
+
+.three-option-visible {
     display: flex;
     gap: 0.5em;
     opacity: 0;
 
 }
-.receiver:hover .three-option-visible{
+
+.receiver:hover .three-option-visible {
     opacity: 1;
 }
 
-.forward-share-container:hover .message-options{
-   opacity: 1;
- 
+.forward-share-container:hover .message-options {
+    opacity: 1;
+
 }
 
 
@@ -511,7 +530,7 @@ span {
 .logo:hover .text {
     opacity: 1;
     color: transparent;
-    -webkit-text-stroke:0.9px var(--text-color);
+    -webkit-text-stroke: 0.9px var(--text-color);
 }
 
 /* =========================Thread=================================== */
@@ -530,7 +549,7 @@ span {
 
 /* ===========================input box design============== */
 .input-msg {
-    background-color: var(--bg-color);
+    background-color: var(--message);
     display: flex;
     /* padding: 0.5em; */
     flex-direction: column;
@@ -560,7 +579,7 @@ span {
     line-height: 2em;
     align-items: center;
     border-radius: 0.3em;
-    background-color: var(--bg-color);
+    background-color: var(--message);
     border-color: var(--sub-text-color);
     color: var(--text-color);
     font-size: 1.2em;
@@ -605,7 +624,7 @@ span {
 .midinput input {
     font-size: 1.2em;
     border: none;
-    background-color: var(--bg-color);
+    background-color: var(--message);
     width: calc(100% - 0.5em);
     color: var(--text-color)
 }
