@@ -290,6 +290,7 @@ span {
 .message-container {
     flex: 1;
     overflow-y: auto;
+   
 
 
 }
@@ -362,6 +363,7 @@ span {
     align-items: flex-start;
     max-width: 50%;
     margin-left: auto;
+   
 
 }
 
