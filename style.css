@@ -186,7 +186,27 @@ img {
     display: flex;
     flex: 1
 }
+.w-title{
+    cursor: pointer;
+    position: relative;
+}
+.w-title::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0%;
+    border-radius: 2px;
+    background-color: var(--primary-color);
+    transition: all ease 2s;
 
+}
+
+.w-title:hover::after{
+    width: 100%;
+}
 .nav {
     position: sticky;
     top: 0;
@@ -533,8 +553,8 @@ span {
 
 .logo:hover .text {
     opacity: 1;
-    color: transparent;
-    -webkit-text-stroke: 0.9px var(--text-color);
+    /* color: transparent;
+    -webkit-text-stroke: 0.5px var(--text-color); */
     
 }
 
