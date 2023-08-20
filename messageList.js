@@ -4,7 +4,7 @@ class MessageListComponent extends HTMLElement {
    
     const template = document.createElement("template");
     template.innerHTML = `
-    <link rel="stylesheet" href="style.css">
+      <link rel="stylesheet" href="style.css">
       <div class="column" id="messageContainer"></div>
     `;
 
@@ -25,20 +25,10 @@ class MessageListComponent extends HTMLElement {
       { owner: "Alice", time: "7:55 PM", text: "Reply to the first message" },
       // Add more messages here
     ];
-
-    // Sort messages based on time
-    messages.sort((a, b) => new Date(a.time) - new Date(b.time));
-
     messages.forEach(messageData => {
-      if (messageData.owner === "You") {
-        const senderMessageBox = document.createElement("send-messagebox");
-        senderMessageBox.setSendMessageData(messageData);
-        messageContainer.appendChild(senderMessageBox);
-      } else {
-        const messageBox = document.createElement("message-box");
-        messageBox.setMessageData(messageData);
-        messageContainer.appendChild(messageBox);
-      }
+      const messageBox = document.createElement("message-box");
+      messageBox.setMessageData(messageData);
+      messageContainer.appendChild(messageBox);
     });
   }
 }

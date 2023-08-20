@@ -375,25 +375,23 @@ span {
     /* Adjust the maximum width as needed */
 }
 
-.sender-name-time {
-    justify-content: flex-end;
-}
+
 
 .sender {
-
-    justify-content: flex-end;
+    flex-direction: row-reverse;
+    justify-content: end;
     align-items: flex-start;
     max-width: 50%;
-    margin-left: auto;
-   
+    margin-left:auto;
 
 }
 
-.receiver {
 
+.receiver {
     justify-content: flex-start;
     align-items: flex-start;
     max-width: 50%;
+    margin-right: auto;
 
 }
 
@@ -409,26 +407,29 @@ span {
     padding: 1em;
 
     background-color: var(--message-text-bg);
-
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
     border-top-left-radius: 1em;
 }
+.sender-name-time {
+    justify-content: flex-end;
+}
 
 
-
-.message-head-content {
+.receiver-zone{
     display: flex;
     position: relative;
     justify-content: space-between;
     align-items: center;
 }
+.sender-zone{
+   display: flex;
+   flex-direction: row-reverse;
+   
+}
 
 .forward-share-container {
     position: relative;
-
-
-
 
 }
 
@@ -438,8 +439,8 @@ span {
     display: flex;
     cursor: pointer;
     margin: auto;
-
-    /* display: none; */
+/* 
+    display: none; */
 
     margin-left: -5em;
     margin-top: -0.5em;
@@ -486,6 +487,9 @@ span {
 }
 
 .receiver:hover .three-option-visible {
+    opacity: 1;
+}
+.sender:hover .three-option-visible {
     opacity: 1;
 }
 
@@ -627,7 +631,7 @@ span {
 
 .textStyle {
     position: absolute;
-    max-width: 55%;
+    bottom: 4em;
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
