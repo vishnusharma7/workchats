@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Cropper</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="wlogo.png">
+    <title>Worksetu</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
 </head>
 
 <style>
-    * {
+    *{
         margin: 0;
         padding: 0;
     }
-
-    html,
-    body {
+    html, body{
         width: 100%;
         height: 100%;
         font-family: sans-serif;
     }
-
-
-    .img-container {
+    
+    
+    .img-container{
         width: 100%;
         height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
-
-
+        background: linear-gradient(80deg, #081ca4, #114005);
+        backdrop-filter: blur(10px);
+    
     }
 
     .img-box {
@@ -39,42 +37,76 @@
         flex-direction: column;
         align-items: center;
         gap: 2em;
-        border: 1px solid rgb(136, 143, 136);
+        border: 1px solid rgb(12, 66, 214);
         border-radius: 2em;
-
+        transition: box-shadow 0.3s;
+        position: relative;
+        overflow: hidden;
     }
-
-    .buttons {
+    
+    .img-box:hover {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    
+    .img-box::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to right, rgba(255, 255, 255, 1) 10%, transparent 100%);
+        animation: shining 2s infinite;
+        opacity: 0;
+        pointer-events: none;
+    }
+    
+    @keyframes shining {
+        0% {
+            transform: translateX(-100%);
+            opacity: 0.8;
+        }
+        100% {
+            transform: translateX(100%);
+            opacity: 0;
+        }
+    }
+    
+    
+    .buttons{
         display: flex;
         gap: 1em;
     }
-
-    .img-box button {
-        width: 100%;
-        padding: 0.8em;
-        border-radius: 0.5em;
-        border: none;
-        border: 1px solid rgb(61, 135, 191);
-        background-color: rgb(0, 170, 255);
-        font-size: 1em;
-        text-transform: uppercase;
-        transition: all ease 2s;
-        color: white;
-        cursor: pointer;
-
+    .img-box button{
+    width: 100%;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    border: none;
+    border: 1px solid rgb(11, 57, 183);
+    background: linear-gradient(80deg, #081ca4, #0a0909);
+    backdrop-filter: blur(10px);
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: all ease 2s;
+    color: white;
+    cursor: pointer;
+    
     }
 
-    .img-box img {
+    
+ 
+    .img-box img{
         width: 150px;
         height: 150px;
         border-radius: 50%;
     }
-
+    
+    /* Define your CSS styles here */
     .img-box {
         position: relative;
-
+       
     }
-
+    
     .crop-popup {
         display: none;
         position: fixed;
@@ -86,66 +118,67 @@
         justify-content: center;
         align-items: center;
     }
-
+    
     .crop-container {
         position: relative;
         background-color: #fff;
         padding: 20px;
         max-width: 90%;
         max-height: 90%;
-        min-width: 300px;
-        max-width: 600px;
         overflow: auto;
     }
-
+    
     .crop-container img {
         max-width: 100%;
         height: auto;
     }
-
+    
     .crop-container button {
         display: block;
         margin-top: 10px;
     }
-
-    #saveCrop {
+    #saveCrop{
         width: 100%;
-        padding: 0.8em;
-        border-radius: 0.5em;
-        border: none;
-        border: 1px solid rgb(61, 135, 191);
-        background-color: rgb(0, 170, 255);
-        font-size: 1em;
-        text-transform: uppercase;
-        transition: all ease 2s;
-        color: white;
-        cursor: pointer;
+    padding: 0.8em;
+    border-radius: 0.5em;
+    border: none;
+    border: 1px solid rgb(61, 135, 191);
+    background-color: rgb(0, 170, 255);
+    font-size: 1em;
+    text-transform: uppercase;
+    transition: all ease 2s;
+    color: white;
+    cursor: pointer;
     }
+    /* Style for the image input button */
+#imageInput {
+    display: none; /* Hide the default input element */
+}
 
-    #imageInput {
-        display: none;
-    }
+.upload-btn {
+    display: inline-block;
+    
+    background: linear-gradient(80deg, #081ca4, #0a0909);
+    backdrop-filter: blur(10px);
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-    .upload-btn {
-        display: inline-block;
-        background-color: rgb(0, 170, 255);
-        color: white;
-        padding: 10px 20px;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: background-color 0.3s;
-    }
+.upload-btn:hover {
+    background-color: #2980b9;
+}
 
-    .upload-btn:hover {
-        background-color: #2980b9;
-    }
+.upload-icon {
+    
+    margin-right: 10px;
+}
 
-    .upload-icon {
-        margin-right: 10px;
-    }
+    
 </style>
-
 <body>
     <div class="img-container">
         <div class="img-box">
@@ -169,16 +202,15 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
     <script src="script.js"></script>
 
-
+    
 </body>
-
 </html>
 
 
 
 
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function() {
         const imageInput = document.getElementById("imageInput");
         const originalImage = document.getElementById("originalImage");
         const editButton = document.getElementById("editButton");
@@ -186,37 +218,38 @@
         const cropImage = document.getElementById("cropImage");
         const saveCropButton = document.getElementById("saveCrop");
         let cropper;
-
+    
         imageInput.addEventListener("change", () => {
             if (imageInput.files && imageInput.files[0]) {
                 const reader = new FileReader();
-                reader.onload = function (e) {
+                reader.onload = function(e) {
                     originalImage.src = reader.result;
                 };
                 reader.readAsDataURL(imageInput.files[0]);
             }
         });
-
+    
         editButton.addEventListener("click", () => {
             cropImage.src = originalImage.src;
             cropPopup.style.display = "flex";
-
+    
             if (cropper) {
                 cropper.destroy();
             }
-
+    
             cropper = new Cropper(cropImage);
         });
-
+    
         saveCropButton.addEventListener("click", () => {
             const croppedCanvas = cropper.getCroppedCanvas();
             const croppedImage = croppedCanvas.toDataURL();
             originalImage.src = croppedImage;
             cropPopup.style.display = "none";
         });
+
+        
     });
-
-
+    
+    
 </script>
-
 </html>

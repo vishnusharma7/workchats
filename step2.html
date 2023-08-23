@@ -7,6 +7,8 @@
     <link rel="icon" type="image/x-icon" href="wlogo.png">
     <title>WorkSetu</title>
     <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+
 </head>
 
 <body>
@@ -22,24 +24,81 @@
         <div style="display: flex;align-items: center;flex-wrap: wrap;gap: 1em;">
             <div style="flex: 1;display: flex;flex-direction: column;align-self: end;">
                 <h1>What's your name?</h1>
-                <p>Adding your name and profile photo helps your teammates to recognise and connect with you more easily.</p>
-                <input class="input" placeholder="Enter your good name"/>
+                <p>Adding your name and profile photo helps your teammates to recognise and connect with you more
+                    easily.</p>
+                <input class="input" placeholder="Enter your good name" />
                 <a class="button" href="step3.html" style="width: auto;"> Next</a>
             </div>
-            <div style="flex: 1; display: flex; align-items: center; justify-content: center;">
-                <div style="display: flex; flex-direction: column;">
-                    <img id="profile-image" src="image_not_found.png">
-                    <input type="file" id="image-input" style="display: none;">
-                    <button id="change-image-button" class="button">Change</button>
+            <div class="cropper-image-container">
+                
+                    <div class="img-box">
+                        <img src="receiver.jpeg" alt="" id="originalImage">
+                        <div class="button-continue">
+                        <label for="imageInput" class="button">
+                            <span >Upload photo</span>
+                        </label>
+                        <input type="file" id="imageInput" accept="image/*">
+                       <button class="button">Continue</button>
+                    </div>
+                    </div>
+                
+                <div class="crop-popup" id="cropPopup">
+                    <div class="crop-container">
+                        <img src="" alt="" id="cropImage">
+                        <button id="saveCrop">Save</button>
+                    </div>
                 </div>
             </div>
         </div>
+       
     </div>
 
-    
-     <!--dark mode script -->
-     <script src="darkmode.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <!--dark mode script -->
+    <script src="darkmode.js"></script>
     <script src="script.js"></script>
 </body>
 
 </html>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const imageInput = document.getElementById("imageInput");
+        const originalImage = document.getElementById("originalImage");
+        const cropPopup = document.getElementById("cropPopup");
+        const cropImage = document.getElementById("cropImage");
+        const saveCropButton = document.getElementById("saveCrop");
+        let cropper;
+
+        imageInput.addEventListener("change", () => {
+            if (imageInput.files && imageInput.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function (e) {
+                    originalImage.src = reader.result;
+                    cropPopup.style.display = "flex";
+                    if (cropper) {
+                        cropper.destroy();
+                    }
+                    cropper = new Cropper(cropImage, {
+                        aspectRatio: 1, 
+                        viewMode: 1,  
+                    });
+                    cropper.replace(reader.result);
+                };
+                reader.readAsDataURL(imageInput.files[0]);
+            }
+        });
+
+        saveCropButton.addEventListener("click", () => {
+            const croppedCanvas = cropper.getCroppedCanvas({
+                width: 300, // Set default crop width
+                height: 300 // Set default crop height
+            });
+            const croppedImage = croppedCanvas.toDataURL();
+            originalImage.src = croppedImage;
+            cropPopup.style.display = "none";
+        });
+    });
+
+</script>
