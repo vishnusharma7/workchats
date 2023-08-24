@@ -69,6 +69,12 @@ h2 {
     font-weight: 500;
 }
 
+a{
+    text-decoration: none;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
 .input::placeholder {
     padding: 0.5em;
     color: #999999;
@@ -259,8 +265,8 @@ img {
     position: sticky;
     bottom: 0;
     left: 0;
-    margin-top: 10px; 
-    z-index: 1; 
+    margin-top: 10px;
+    z-index: 1;
 }
 
 #imageInput {
@@ -302,8 +308,9 @@ img {
         max-width: 80%;
         font-size: 14px;
     }
+
     #saveCrop {
-        margin-top: 0; 
+        margin-top: 0;
     }
 }
 
@@ -1175,4 +1182,193 @@ a {
     .menu-button-leftbar {
         display: block;
     }
+}
+
+
+/*============ profile============ */
+
+.container-prof {
+    width: 100%;
+    margin: auto;
+}
+
+.navbar-prof {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    width: calc(100% - 2em);
+}
+
+.left {
+    display: flex;
+}
+
+.logo-prof img {
+    width: 80px;
+}
+
+.right {
+    display: flex;
+    gap: 1em;
+}
+
+.righticons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.righticons:nth-child(3) {
+    gap: 1em;
+}
+
+.righticons img {
+    /* height: 50px; */
+    width: 40px;
+}
+
+.editprofile-container {
+    width: 60%;
+    margin: auto;
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+    background-color: rgb(144, 143, 143, 0.1);
+
+
+
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+
+}
+
+.editprof {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2em;
+    width: calc(100% - 4em);
+    gap: 10px;
+
+}
+
+.editprof span {
+    font-size: 1.5em;
+    color: var(--text-color);
+}
+
+.profilepage-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 3em;
+    padding: 2em;
+    width: calc(100% - 4em);
+
+}
+
+.leftside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+
+.leftside img {
+    width: 250px;
+    border-radius: 0.5em;
+}
+
+.rightside {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+}
+
+.rightside input {
+    width: 70%;
+    padding: 1em;
+    justify-content: end;
+    color: var(--text-color);
+    border: none;
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    border-radius: 0.5em;
+}
+
+.rightside input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.inputs {
+    width:100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 2em;
+}
+
+.inputs span {
+    flex: 1;
+    font-size: 1em;
+    justify-content: flex-start;
+}
+
+.saveandcancel {
+    width: 100%;
+    display: flex;
+
+    justify-content: space-between;
+    gap: 0.5em;
+}
+
+@media screen and (max-width:1200px) {
+    .profilepage-main {
+        flex-direction: column;
+    }
+    .saveandcancel button{
+        width: 40%;
+    }
+}
+
+@media screen and (max-width:768px){
+
+    .editprofile-container{
+        width: 90%;
+       
+    }
+    .leftside img{
+        width: 150px;
+    }
+    .leftside button{
+        font-size: 1em;
+    }
+    .saveandcancel button{
+        
+        font-size: 1em;
+    }
+    .rightside input{
+        font-size: 0.7em;
+        width: 50%;
+    }
+    .editprof{
+       
+    }
+
 }
