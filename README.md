@@ -30,7 +30,7 @@ WorkSetu is built with a responsive design, making it accessible and functional 
 
 To deploy and run WorkSetu locally, follow these steps:
 
-1. Clone this repository: `git clone https://github.com/vishnusharma7/worksetu.git`
+1. Clone this repository: `git clone https://github.com/vishnusharma7/workchats.git`
 2. Navigate to the project directory: `cd workchats`
 3. Open the `index.html` file in your preferred web browser.
 4. Start exploring the features of WorkSetu and engage in AI-assisted conversations.
