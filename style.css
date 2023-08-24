@@ -1176,3 +1176,126 @@ a {
         display: block;
     }
 }
+/* profile */
+.container-prof{
+    width: 100%;
+    margin: auto;
+}
+.navbar-prof{
+    /* width: 100%; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+.left{
+    display: flex;
+}
+.logo-prof img{
+    /* height: 100px; */
+    width: 70px;
+}
+.right{
+    display: flex;
+    gap: 1em;
+}
+.righticons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.righticons:nth-child(3){
+    gap: 1em;
+}
+.righticons img{
+    /* height: 50px; */
+    width: 40px;
+}
+.editprofile-container{
+    width: 60%;
+    margin: auto;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+border-radius: 1em;
+background-color: rgb(144, 143, 143,0.1);
+max-width: 60%;
+
+
+}
+.editprof{
+    width: 100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 30px; */
+    padding: 2em;
+    gap: 10px;
+
+}
+.editprof span{
+    font-size: 1.5em;
+    color: var(--text-color);
+}
+.profilepage-main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* justify-content: space-around; */
+    gap: 3em;
+    padding: 2em;
+    width: calc(100% - 4em);
+   
+}
+.leftside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+}
+.leftside img{
+    width: 250px;
+    border-radius: 0.5em;
+}
+.rightside{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+    justify-content: center;
+}
+.rightside input{
+    padding: 1em;
+    border: none;
+    border: 0.5px solid var(--border-color);
+    border-radius: 0.5em;
+}
+.rightside input:focus{
+    outline: none;
+    border-color: var(--primary-color);
+}
+.inputs{
+    display: flex;
+    justify-content:flex-start;
+    align-items: center; 
+    gap: 30px;
+}
+.inputs span{
+    font-size: 1em;
+    justify-content: flex-start;
+}
+.saveandcancel{
+    width: 100%;
+    display: flex;
+    gap: 15px;
+}
+@media  screen and (max-width:1200px){
+.profilepage-main{
+    flex-direction: column;
+}
+}
