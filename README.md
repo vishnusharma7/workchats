@@ -1,6 +1,6 @@
 # WorkSetu - AI-Powered Chat Application
 
-✈️Visit the [live demo](https://vishnusharma7.github.io/workchats/index.html) to get started!
+Visit the [live demo](https://vikrammali.github.io/workchat/index.html) to get started!
 
 **WorkSetu** is a cutting-edge chat application designed to streamline communication in professional environments. With integrated AI capabilities, WorkSetu enhances productivity by offering users the ability to engage in AI-assisted conversations, manage multiple channels for various topics, and effortlessly switch between business, technology, personal, and development discussions. This repository contains the source code and assets for the WorkSetu application.
 
@@ -25,26 +25,6 @@ WorkSetu facilitates real-time messaging, enabling instantaneous communication b
 ### 5. Responsive Design
 
 WorkSetu is built with a responsive design, making it accessible and functional across various devices and screen sizes. Whether on a desktop computer, tablet, or smartphone, users can enjoy a consistent and optimized experience.
-
-## Getting Started
-
-To deploy and run WorkSetu locally, follow these steps:
-
-1. Clone this repository: `git clone https://github.com/vishnusharma7/worksetu.git`
-2. Navigate to the project directory: `cd workchats`
-3. Open the `index.html` file in your preferred web browser.
-4. Start exploring the features of WorkSetu and engage in AI-assisted conversations.
-
-## Contributing
-
-We welcome contributions to enhance the functionality and features of WorkSetu. To contribute:
-
-1. Fork this repository and clone it to your local machine.
-2. Create a new branch: `git checkout -b main`
-3. Make your modifications and improvements.
-4. Commit your changes: `git commit -m "Add your descriptive commit message"`
-5. Push to the branch: `git push origin main`
-6. Open a Pull Request in this repository.
 
 ---
 

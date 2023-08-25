@@ -13,7 +13,7 @@ class MessageListComponent extends HTMLElement {
 
     this.renderMessages();
   }
-  
+
   renderMessages() {
     const messageContainer = this.shadowRoot.getElementById("messageContainer");
 

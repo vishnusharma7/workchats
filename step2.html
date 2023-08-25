@@ -30,32 +30,37 @@
                 <a class="button" href="step3.html" style="width: auto;"> Next</a>
             </div>
             <div class="cropper-image-container">
-                
-                    <div class="img-box">
-                        <img src="receiver.jpeg" alt="" id="originalImage">
-                        <div class="button-continue">
+
+                <div class="img-box">
+                    <img src="img/receiver.jpeg" alt="" id="originalImage">
+                    <div class="button-continue">
                         <label for="imageInput" class="button">
-                            <span >Upload photo</span>
+                            <span>Upload photo</span>
                         </label>
                         <input type="file" id="imageInput" accept="image/*">
-                       <button class="button">Continue</button>
+
+                        <button class="button">Continue</button>
+
                     </div>
-                    </div>
-                
+                </div>
+
                 <div class="crop-popup" id="cropPopup">
                     <div class="crop-container">
                         <img src="" alt="" id="cropImage">
-                        <button id="saveCrop">Save</button>
+                        <div class="two-button">
+                            <button class="button" id="saveCrop">Save</button>
+                            <button class="button" id="cancelCrop">Cancel</button>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-       
+
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
     <!--dark mode script -->
-    <script src="darkmode.js"></script>
+    <script src="components/darkmode.js"></script>
     <script src="script.js"></script>
 </body>
 
@@ -69,6 +74,7 @@
         const cropPopup = document.getElementById("cropPopup");
         const cropImage = document.getElementById("cropImage");
         const saveCropButton = document.getElementById("saveCrop");
+        const cancelCrop = document.getElementById("cancelCrop");
         let cropper;
 
         imageInput.addEventListener("change", () => {
@@ -81,8 +87,8 @@
                         cropper.destroy();
                     }
                     cropper = new Cropper(cropImage, {
-                        aspectRatio: 1, 
-                        viewMode: 1,  
+                        aspectRatio: 1,
+                        viewMode: 1,
                     });
                     cropper.replace(reader.result);
                 };
@@ -98,6 +104,14 @@
             const croppedImage = croppedCanvas.toDataURL();
             originalImage.src = croppedImage;
             cropPopup.style.display = "none";
+        });
+        cancelCrop.addEventListener("click", () => {
+            cropPopup.style.display = "none";
+            imageInput.value = ''; // Clear the selected file
+            originalImage.src = ''; // Clear the displayed image
+            if (cropper) {
+                cropper.destroy(); // Destroy the cropper instance
+            }
         });
     });
 
