@@ -1,5 +1,10 @@
 # WorkSetu - AI-Powered Chat Application
 
+<p align="center"> 
+
+<img src="img/rds.png" alt="WorkSetu GIF" width="175" height="175" />
+</p>
+
 ✈️Visit the [live demo](https://vishnusharma7.github.io/workchats/index.html) to get started!
 
 **WorkSetu** is a cutting-edge chat application designed to streamline communication in professional environments. With integrated AI capabilities, WorkSetu enhances productivity by offering users the ability to engage in AI-assisted conversations, manage multiple channels for various topics, and effortlessly switch between business, technology, personal, and development discussions. This repository contains the source code and assets for the WorkSetu application.
