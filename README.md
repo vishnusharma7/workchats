@@ -2,7 +2,7 @@
 
 <p align="center"> 
 
-<img src="img/rds.png" alt="WorkSetu GIF" width="175" height="175" />
+<img src="img/aigen.png" alt="WorkSetu GIF" width="300" height="300" />
 </p>
 
 ✈️Visit the [live demo](https://vishnusharma7.github.io/workchats/index.html) to get started!
