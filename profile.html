@@ -7,6 +7,8 @@
     <link rel="icon" type="image/x-icon" href="wlogo.png">
     <link rel="stylesheet" href="style.css">
     <title>Profile page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+
 </head>
 
 <body>
@@ -26,8 +28,7 @@
             </div>
             <div class="profilepage-main">
                 <div class="leftside">
-                    <img src="img/receiver.jpeg" alt="">
-                    <button class="button">Change</button>
+                    <photo-cropper></photo-cropper>
                 </div>
                 <div class="rightside">
                     <div class="inputs">
@@ -55,10 +56,12 @@
         </div>
     </div>
     </div>
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <script src="components/photo-cropper.js"></script>
     <script src="components/navBar.js"></script>
     <script src="components/sideBarComponent.js"></script>
     <script src="components/darkmode.js"></script>
+    
 </body>
 
 </html>

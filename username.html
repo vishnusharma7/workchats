@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="wlogo.png">
+    <title>WorkSetu</title>
+    <link href="style.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.css">
+
+</head>
+
+<body>
+    <div class="container" style="display: flex; flex-direction: column; gap: 1em;">
+        <div style="display: flex;align-items: center;flex-wrap: wrap;gap: 1em;">
+            <div style="flex:1;display: flex;flex-direction: column;align-self: end; ">
+                <h1>What's your name?</h1>
+                <p>Adding your name and profile photo helps your teammates to recognise and connect with you more
+                    easily.</p>
+                <input class="input" placeholder="Enter your good name" />
+                <a class="button" href="otp.html" style="width: auto;">Next</a>
+            </div>
+            <div class="photoz" style="flex:1; border: 0.5px solid var(--border-color);  border-radius: 1em;">
+                <photo-cropper></photo-cropper>
+            </div>
+
+
+        </div>
+
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.13/cropper.min.js"></script>
+    <!--dark mode script -->
+    <script src="components/darkmode.js"></script>
+    <script src="components/photo-cropper.js"></script>
+
+</body>
+
+</html>
+
+
+
+
+
+

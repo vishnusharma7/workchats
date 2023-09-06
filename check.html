@@ -7,6 +7,7 @@
     <link rel="icon" type="image/x-icon" href="wlogo.png">
     <title>WorkSetu</title>
     <link href="style.css" rel="stylesheet" />
+
    
 
 </head>
@@ -41,11 +42,7 @@
             <send-message-box></send-message-box>
            
         </div>
-
-
-
-
-
+    
         <!--========================== thread=========== -->
         <div class="thread" id="threads">
             <div class="row" style="justify-content:space-between;">
@@ -64,8 +61,6 @@
             <!-- message content -->
             <div class="message-container column">
                 <message-list></message-list>
-             
-
             </div>
             <!-- message input -->
             <send-message-box></send-message-box>
@@ -75,253 +70,25 @@
     </div>
 
 
-    <!--================================================================= pop up adding ============================================================-->
-
-
-    <!-- workspace-detail popup-container -->
-    <div class="workspace-detail popup-container">
-        <div class="column" style="gap:0.5em">
-            <h2>Edit work space detail</h1>
-                <span>Workspace name</span>
-                <input class="input" type="text">
-                <span>URL</span>
-                <input class="input" type="text" placeholder="https://hi-tdq5698.slack.com">
-                <div class="row" style="width: 100%;">
-                    <button
-                        style=" width: 50%;background-color:var(--bg-color);color:var(--text-color); border:0.5px solid var(--primary-color)"
-                        class="button" data-action="cancel">Cancel</button>
-                    <button style="width: 50%; " class="button">Save</button>
-                </div>
-        </div>
-    </div>
-
-
-    <!-- you-worksetu popup -->
-    <div class="your-slack popup" id="yourSlackPopup">
-        <div class="column">
-            <div class="row">
-                <img class="img" src="sender.png" alt=""
-                    style=" width: 40px; height:40px; border-radius:0.5em; cursor:pointer;">
-                <div class="column" style="gap:2px">
-                    <span style="font-size: 1em; font-weight:600;">Your Worksetu</span>
-                    <span>worksetu-tdq3097.slack.com</span>
-                </div>
-            </div>
-            <div class="mid-content">
-                <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
-                    <span class="invite" style="cursor: pointer;">Invite people to your slack</span>
-                    <span class="create-pop" style="cursor: pointer;">Create channel</span>
-                </div>
-                <div class="column" style="border-bottom: 1px solid grey; padding:10px " ;>
-                    <span class="setting-and-admin" style="cursor: pointer;">Setting and administration</span>
-
-                </div>
-                <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
-                    <span class="work-pop-up" style="cursor: pointer;">Add workspace</span>
-                    <span class="switch-button" style="cursor: pointer;">Switch workspace</span>
-                </div>
-            </div>
-            <div>
-                <button class="button" style="width: 10px; font-size:16px">Sign out</button>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- profile-popup -->
-    <div class="profile-popup">
-        <div class="column">
-            <div class="row">
-                <img class="img" src="sender.png" alt="">
-                <div class="column" style="gap: 2px;">
-                    <span style="font-size:1em; font-weight:600 ">Test User</span>
-                    <span style="color:rgb(11, 173, 11); ">Active</span>
-                </div>
-            </div>
-            <div class="column" style="border-bottom: 1px solid grey; padding:10px " ;>
-                <span>Set Yourself away</span>
-                <div class="row" style="justify-content:space-between">
-                    <span>Pause Notifications</span>
-                    <div class="row">
-                        <span>On</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-chevron-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z" />
-                        </svg>
-
-                    </div>
-                </div>
-            </div>
-            <div class="column" style="border-bottom: 1px solid grey; padding:10px" ;>
-                <a href="profile.html"><span>Profile</span></a>
-                <span>Preference</span>
-            </div>
-            <div class="column">
-                <button class="button" style=" font-size:16px">Sign out</button>
-            </div>
-        </div>
-    </div>
-
-    <!-- invite-pop-up -->
-    <div class="invite-people popup">
-        <div class="column">
-            <span style="font-size:1em; font-weight:600 ">Invite people</span>
-            <span style="font-size:0.7em; font-weight:600 ">To:</span>
-            <textarea type="text" placeholder="name@gmail.com"></textarea>
-            <div class="row" style="justify-content: space-between;">
-                <div class="row">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="bi bi-link-45deg" viewBox="0 0 16 16">
-                        <path
-                            d="M4.715 6.542 3.343 7.914a3 3 0 1 0 4.243 4.243l1.828-1.829A3 3 0 0 0 8.586 5.5L8 6.086a1.002 1.002 0 0 0-.154.199 2 2 0 0 1 .861 3.337L6.88 11.45a2 2 0 1 1-2.83-2.83l.793-.792a4.018 4.018 0 0 1-.128-1.287z" />
-                        <path
-                            d="M6.586 4.672A3 3 0 0 0 7.414 9.5l.775-.776a2 2 0 0 1-.896-3.346L9.12 3.55a2 2 0 1 1 2.83 2.83l-.793.792c.112.42.155.855.128 1.287l1.372-1.372a3 3 0 1 0-4.243-4.243L6.586 4.672z" />
-                    </svg>
-                    <a style="font-size:1em; color:var(--text-color)" href="">Copy invite link</a>
-                </div>
-                <div class="column">
-                    <button class="button" style=" font-size:16px">Send</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- create-channel pop up -->
-    <div class="create-channel-popup">
-        <div class="column">
-            <span style="font-size:1em; font-weight:600 ">Create channel</span>
-            <span style="font-size:0.7em; font-weight:600 ">Name</span>
-            <input class="input" type="text" placeholder="e.g Plan finance">
-            <span>Channels are where conversations happen around a topic. Use a name that is easy to find and
-                understand.</span>
-            <div class="row" style="justify-content: space-between;">
-                <div class="column" style="width: 100%;">
-                    <button class="button" style=" font-size:16px;">Send</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- setting-and-administration popup -->
-    <div class="setting-adminitration-popup">
-        <div class="column">
-            <div class="column" style="border-bottom: 1px solid grey; padding:10px; " ;>
-                <span style="font-size: 0.7em; color:var(--sub-text-color)">Setting</span>
-                <span>Workspace setting</span>
-                <span>Customize your slack</span>
-                <span class="edit-workspace-button" style="cursor: pointer;">Edit workspace detail</span>
-            </div>
-            <div class="column" style="border-bottom: 1px solid grey; padding:10px; margin-top:-10px" ;>
-                <span style="font-size: 0.7em; color:var(--sub-text-color)">Administration</span>
-                <a href="manage.html" style="color:var(--text-color)"><span>Manage member </span></a>
-                <span>Manage apps</span>
-            </div>
-        </div>
-    </div>
-
-    <!-- add workspace -->
-    <div class="add-workspace-popup">
-        <div class="column">
-            <span style="font-size: 0.7em; color:var(--sub-text-color)">Add workspace</span>
-            <a href="index.html" style="color:var(--text-color)"><span>Sign in another worspace</span></a>
-            <a href="create.html" style="color:var(--text-color)"><span>Create new worspace</span></a>
-            <a href="create.html" style="color:var(--text-color)"><span>Join workspace</span></a>
-        </div>
-    </div>
-
-    
-    <div class="edit-workspace-detail-popup">
-        <div class="column">
-            <span style="font-size:1em; font-weight:600 ">Edit workspace detail</span>
-            <span>Add a name to represent your company or organization. This name will also be shown to other
-                organizations that you work with using Slack.</span>
-            <span style="font-size:0.7em; font-weight:600 ">Workspace name</span>
-            <input class="input" type="text" placeholder="">
-            <span style="font-size:0.7em; font-weight:600; margin-top:-15px ">URL</span>
-            <input class="input" type="text" placeholder="https://hi-tdq5698.slack.com">
-            <div class="row" style="justify-content: space-between;">
-                <div class="column" style="width: 100%;">
-                    <button class="button"
-                        style=" font-size:16px; background-color:var(--bg-color); border:1px solid var(--primary-color); color:var(--text-color)"
-                        data-action="editcancel">Cancel</button>
-                </div>
-                <div class="column" style="width: 100%;">
-                    <button class="button" style=" font-size:16px;">Send</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="switch-workspace-popup">
-        <div class="column">
-            <span style="font-size:1em; font-weight:600 ">Edit workspace detail</span>
-            <div class="row">
-                <img class="img" src="profile.png" alt=""
-                    style=" width: 40px; height:40px; border-radius:0.5em; cursor:pointer;">
-                <div class="column" style="gap:2px">
-                    <span style="font-size: 0.8em;">Enjoyment</span>
-                </div>
-            </div>
-            <div class="row">
-                <img class="img" src="profile.png" alt=""
-                    style=" width: 40px; height:40px; border-radius:0.5em; cursor:pointer;">
-                <div class="column" style="gap:2px">
-                    <span style="font-size: 0.8em;">Finance</span>
-                </div>
-            </div>
-            <div class="row">
-                <img class="img" src="profile.png" alt=""
-                    style=" width: 40px; height:40px; border-radius:0.5em; cursor:pointer;">
-                <div class="column" style="gap:2px">
-                    <span style="font-size: 0.8em; ">Testing</span>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="add-channel-pop-up">
-        <div class="column">
-            <span style="font-size:1em; font-weight:600 ">Create channel</span>
-            <span style="font-size:0.7em; font-weight:600 ">Name</span>
-            <input class="input" type="text" placeholder="e.g Plan finance">
-            <span>Channels are where conversations happen around a topic. Use a name that is easy to find and
-                understand.</span>
-            <div class="row" style="justify-content: space-between;">
-                <div class="column" style="width: 100%;">
-                    <button class="button" style=" font-size:16px;">Send</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
 
     <!-- adding web components -->
 
 
     <!--================================================================= pop up end  ============================================================-->
 
-    
-    <!-- sender and receiver component -->
     <script src="components/navBar.js"></script>
+
+    <!-- sender and receiver component -->
     <script src="components/sideBarComponent.js"></script>
     <script src="components/messageBox.js"></script>
     <!-- sender and receiver component called under this -->
     <script src="components/messageList.js"></script>
-
-    <!-- input box hide svg script -->
-    <script src="inputbox.js"></script>
     <script src="components/send-messageBox.js"></script>  
     <!-- message forward share reply thread -->
-    <!-- <script src="messageoption.js"></script> -->
-    <!-- Reply thread script -->
-    <script src="replythread.js"></script>
-    <!-- hide sidebar script -->
-    <script src="components/sidebar.js"></script>
     <!-- dark mode script -->
     <script src="components/darkmode.js"></script>
     <!-- popup script -->
-    <script src="popupscript.js"></script>
+    <!-- <script src="popupscript.js"></script> -->
 
 </body>
 

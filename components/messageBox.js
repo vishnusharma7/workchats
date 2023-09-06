@@ -31,7 +31,7 @@ class MessageBox extends HTMLElement {
                                 <path
                                     d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zM4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0 2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z" />
                             </svg>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                            <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                 fill="currentColor" class="bi bi-arrow-90deg-right" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd"
                                     d="M14.854 4.854a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 4H3.5A2.5 2.5 0 0 0 1 6.5v8a.5.5 0 0 0 1 0v-8A1.5 1.5 0 0 1 3.5 5h9.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4z" />
@@ -48,6 +48,7 @@ class MessageBox extends HTMLElement {
 
                             <!-- option when click three dot in message -->
                             <div class="message-options">
+                         
                                 <div class="row message-options-elements">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                         fill="currentColor" class="bi bi-reply" viewBox="0 0 16 16">
@@ -56,6 +57,7 @@ class MessageBox extends HTMLElement {
                                     </svg>
                                     <span>Reply</span>
                                 </div>
+                         
                                 <div class="row message-options-elements">
             
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
@@ -76,7 +78,7 @@ class MessageBox extends HTMLElement {
                                     <span>Emoji</span>
                                 </div>
             
-                                <div class="row message-options-elements" id="open-threads">
+                                <div class="row message-options-elements" id="thread-button">
                                     <svg  xmlns="http://www.w3.org/2000/svg" width="16" height="16"
                                         fill="currentColor" class="bi bi-chat-text" viewBox="0 0 16 16">
                                         <path
@@ -84,7 +86,7 @@ class MessageBox extends HTMLElement {
                                         <path
                                             d="M4 5.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zM4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8zm0 2.5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1h-4a.5.5 0 0 1-.5-.5z" />
                                     </svg>
-                                    <span >Thread</span>
+                                    <span>Thread</span>
                                 </div>
                                 <div class="row message-options-elements">
             
@@ -108,36 +110,37 @@ class MessageBox extends HTMLElement {
         });
 
         shadowRoot.appendChild(template.content.cloneNode(true));
-
+        const threeDots = this.shadowRoot.querySelector(".three-dots");
+        const messageOptions = this.shadowRoot.querySelector(".message-options");
         const threadContainer = document.getElementById("threads");
-
-
         const closeThreadButton = threadContainer.querySelector(".close-thread");
-
         const threadOpenButtons = this.shadowRoot.querySelectorAll(".thread-open");
+        const threadButton = this.shadowRoot.querySelector("#thread-button");
+
+        threeDots.addEventListener("click", () => {
+            console.log("ok-fo");
+            messageOptions.style.display = "flex";
+
+        });
+
+   
+   
 
 
 
-        threadOpenButtons.forEach( e => {
+        threadButton.addEventListener("click", () => {
+            threadContainer.style.display = "flex";
+        });
+        threadOpenButtons.forEach(e => {
             e.addEventListener("click", () => {
                 threadContainer.style.display = "flex";
             });
         });
-
-      
-        
-      
-
-
-
-     
-
         closeThreadButton.addEventListener("click", () => {
             threadContainer.style.display = "none";
         });
-        
-        
     }
+
 
     setMessageData(data) {
         const shadowRoot = this.shadowRoot;
